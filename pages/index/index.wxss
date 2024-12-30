@@ -1,0 +1,15 @@
+.container {
+  padding: 20px;
+}
+
+.device-list {
+  margin-top: 20px;
+}
+
+.device-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于搜索蓝牙设备时需要获取您的位置信息"
+    }
+  },
+  "window": {
+    "navigationBarTitleText": "蓝牙搜索示例"
+  }
+}

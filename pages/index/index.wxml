@@ -1,0 +1,13 @@
+<view class="container">
+  <button bindtap="startBluetooth">开始搜索蓝牙设备</button>
+  <button bindtap="stopBluetooth">停止搜索蓝牙设备</button>
+
+  <view class="device-list">
+    <block wx:for="{{devices}}" wx:key="deviceId">
+      <view class="device-item">
+        <text>{{item.name || '未知设备'}}</text>
+        <button bindtap="connectBluetooth" data-id="{{item.deviceId}}">连接</button>
+      </view>
+    </block>
+  </view>
+</view>
