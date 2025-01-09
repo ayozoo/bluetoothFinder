@@ -1,13 +1,64 @@
 <view class="container">
-  <button bindtap="startBluetooth">开始搜索蓝牙设备</button>
-  <button bindtap="stopBluetooth">停止搜索蓝牙设备</button>
-
-  <view class="device-list">
-    <block wx:for="{{devices}}" wx:key="deviceId">
-      <view class="device-item">
-        <text>{{item.name || '未知设备'}}</text>
-        <button bindtap="connectBluetooth" data-id="{{item.deviceId}}">连接</button>
+   <!-- 蓝牙状态 -->
+   <view class="status-box">
+    <view class="status-line">
+      <view class="status-label">蓝牙状态：</view>
+      <view class="status-text {{isBluetoothEnabled ? 'success' : 'error'}}">
+        {{isBluetoothEnabled ? '已开启' : '未开启'}}
       </view>
+    </view>
+  </view>
+
+  <!-- 操作区域 -->
+  <view class="action-box">
+    <button wx:if="{{!isBluetoothEnabled}}" 
+            type="primary" 
+            bindtap="openBluetoothSetting">
+      打开蓝牙设置
+    </button>
+    
+    <block wx:else>
+      <button type="primary" 
+              bindtap="startScan" 
+              wx:if="{{!isScanning}}">
+        搜索设备
+      </button>
+      <button type="warn" 
+              bindtap="stopScan" 
+              wx:if="{{isScanning}}">
+        停止搜索
+      </button>
     </block>
+  </view>
+
+  <!-- 设备列表 -->
+  <view class="devices-box">
+    <view class="devices-title" wx:if="{{devicesList.length > 0}}">
+      发现的设备 ({{devicesList.length}})
+    </view>
+    
+    <view class="no-devices" wx:if="{{isBluetoothEnabled && !isScanning && devicesList.length === 0}}">
+      <text>暂未发现设备，请点击搜索</text>
+    </view>
+
+    <view class="device-list">
+      <view class="device-item" 
+            wx:for="{{devicesList}}" 
+            wx:key="deviceId"
+            bindtap="selectDevice" 
+            data-device="{{item}}">
+        <view class="device-info">
+          <text class="device-name">{{item.name || '未知设备'}}</text>
+          <text class="device-rssi">信号强度: {{item.RSSI}} dBm</text>
+          <text class="device-distance">估计距离: {{item.distance}} 米</text>
+        </view>
+        <view class="device-arrow">></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜索中提示 -->
+  <view class="scanning-tip" wx:if="{{isScanning}}">
+    <text>正在搜索设备...</text>
   </view>
 </view>

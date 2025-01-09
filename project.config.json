@@ -1,24 +1,29 @@
 {
   "appid": "wx0dee97ed61d1155b",
   "compileType": "miniprogram",
-  "libVersion": "trial",
+  "libVersion": "3.7.4",
   "packOptions": {
     "ignore": [],
     "include": []
   },
   "setting": {
-    "coverView": true,
+    "urlCheck": true,
     "es6": true,
+    "enhance": true,
     "postcss": true,
     "minified": true,
-    "enhance": true,
-    "showShadowRootInWxmlPanel": true,
-    "packNpmRelationList": [],
+    "newFeature": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "condition": false
   },
   "condition": {},
   "editorSetting": {

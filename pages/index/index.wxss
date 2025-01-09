@@ -1,15 +1,108 @@
 .container {
-  padding: 20px;
+  padding: 20rpx;
+}
+
+.status-box {
+  background: #f8f8f8;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.status-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40rpx;
+}
+
+.status-label {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.status-text {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+
+.success {
+  color: #07c160;
+}
+
+.error {
+  color: #ff4d4f;
+}
+
+.action-box {
+  margin: 30rpx 0;
+}
+
+.action-box button {
+  margin: 10rpx 0;
+}
+
+.devices-box {
+  width: 100%;
+}
+
+.devices-title {
+  font-size: 28rpx;
+  color: #666;
+  padding: 20rpx 0;
+}
+
+.no-devices {
+  text-align: center;
+  color: #999;
+  padding: 40rpx 0;
 }
 
 .device-list {
-  margin-top: 20px;
+  width: 100%;
 }
 
 .device-item {
+  background: #fff;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
+  align-items: center;
+}
+
+.device-info {
+  flex: 1;
+}
+
+.device-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.device-rssi,
+.device-distance {
+  font-size: 24rpx;
+  color: #666;
+  display: block;
+  margin-top: 4rpx;
+}
+
+.device-arrow {
+  color: #999;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+
+.scanning-tip {
+  text-align: center;
+  color: #666;
+  padding: 20rpx 0;
 }

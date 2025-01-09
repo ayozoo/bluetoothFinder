@@ -2,12 +2,15 @@
   "pages": [
     "pages/index/index"
   ],
-  "permission": {
-    "scope.userLocation": {
-      "desc": "用于搜索蓝牙设备时需要获取您的位置信息"
-    }
-  },
   "window": {
-    "navigationBarTitleText": "蓝牙搜索示例"
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "蓝牙设备搜索",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.bluetooth": {
+      "desc": "需要使用蓝牙功能来搜索和连接设备"
+    }
   }
 }
