@@ -1,0 +1,24 @@
+<view class="radar-container">
+  <view class="device-info">
+    <text class="device-name">{{deviceName}}</text>
+    <text class="device-rssi">信号强度: {{deviceRssi}} dBm</text>
+    <text class="device-distance">距离: {{distance}} 米</text>
+  </view>
+  
+  <view class="radar-view" style="transform: rotate({{-direction}}deg)">
+    <view class="compass-directions">
+      <text class="direction-n">北</text>
+      <text class="direction-s">南</text>
+      <text class="direction-e">东</text>
+      <text class="direction-w">西</text>
+    </view>
+    <view class="signal-indicator" style="transform: rotate({{maxDirection}}deg)">
+      <view class="arrow"></view>
+    </view>
+  </view>
+
+  <view class="tips">
+    <text>请缓慢转动手机寻找最强信号方向</text>
+    <text>最强信号方向: {{maxDirection}}°</text>
+  </view>
+</view> 

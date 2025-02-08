@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/device-radar/device-radar"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,7 +11,8 @@
   },
   "permission": {
     "scope.bluetooth": {
-      "desc": "需要使用蓝牙功能来搜索和连接设备"
+      "desc": "需要使用蓝牙功能来搜索和连接设备",
+      "scope.userLocation": true
     }
   }
 }
