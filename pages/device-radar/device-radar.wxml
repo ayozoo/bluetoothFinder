@@ -3,19 +3,18 @@
     <text class="device-name">{{deviceName}}</text>
     <text class="device-rssi">信号强度: {{deviceRssi}} dBm</text>
     <text class="device-distance">距离: {{distance}} 米</text>
-    <text class="device-position">位置: {{relativePosition}}</text>
   </view>
   
   <view class="radar-view">
     <view class="compass-directions" style="transform: rotate({{-direction}}deg)">
-      <text class="direction-n">上</text>
-      <text class="direction-s">下</text>
+      <text class="direction-n">前</text>
+      <text class="direction-s">后</text>
       <text class="direction-e">右</text>
       <text class="direction-w">左</text>
-      <text class="direction-ne">右上</text>
-      <text class="direction-se">右下</text>
-      <text class="direction-sw">左下</text>
-      <text class="direction-nw">左上</text>
+      <text class="direction-ne">右前</text>
+      <text class="direction-se">右后</text>
+      <text class="direction-sw">左后</text>
+      <text class="direction-nw">左前</text>
     </view>
     
     <!-- 中心点标记 -->
