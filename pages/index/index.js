@@ -125,10 +125,17 @@ Page({
 
     // 监听发现新设备
     onDeviceFound() {
-        // 监听发现新设备的事件
         wx.onBluetoothDeviceFound((result) => {
             if (result.devices && result.devices[0]) {
                 const newDevice = result.devices[0]
+
+                // 过滤条件：
+                // 1. 设备必须有名称
+                // 2. 设备名称不能为空字符串
+                if (!newDevice.name || newDevice.name.trim() === '') {
+                    return
+                }
+
                 // 计算距离
                 newDevice.distance = this.calculateDistance(newDevice.RSSI).toFixed(2)
 
